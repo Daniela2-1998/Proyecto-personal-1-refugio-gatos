@@ -45,6 +45,7 @@ public class Familias extends javax.swing.JFrame {
         jPanelNormal.setVisible(true);
         jPanelRegistro.setVisible(false);
         jPanelVerFamilias.setVisible(false);
+        jPanelSeguimiento.setVisible(false);
         
     }
 
@@ -66,6 +67,8 @@ public class Familias extends javax.swing.JFrame {
         jPanelMenu = new javax.swing.JPanel();
         jButtonRegistrarGatoFamilia = new javax.swing.JButton();
         jButtonVerFamiliasRegistradas = new javax.swing.JButton();
+        jButtonSeguimiento = new javax.swing.JButton();
+        jButtonInfo = new javax.swing.JButton();
         jButtonVolverAtras = new javax.swing.JButton();
         jButtonSalir = new javax.swing.JButton();
         jPanelNormal = new javax.swing.JPanel();
@@ -92,6 +95,21 @@ public class Familias extends javax.swing.JFrame {
         jLabelTitulo2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableFamilias = new javax.swing.JTable();
+        jPanelSeguimiento = new javax.swing.JPanel();
+        jLabelTitulo3 = new javax.swing.JLabel();
+        jLabelNombreF = new javax.swing.JLabel();
+        textFamilia = new javax.swing.JTextField();
+        jLabelNombreN = new javax.swing.JLabel();
+        textNuevo = new javax.swing.JTextField();
+        jLabelControl = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        textControl = new javax.swing.JTextArea();
+        jLabelAdaptacion = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        textAdaptacion = new javax.swing.JTextArea();
+        jButtonSubirControl = new javax.swing.JButton();
+        jLabelID = new javax.swing.JLabel();
+        textIDFamilia = new javax.swing.JTextField();
         jLabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -126,6 +144,24 @@ public class Familias extends javax.swing.JFrame {
         });
         jPanelMenu.add(jButtonVerFamiliasRegistradas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 210, 50));
 
+        jButtonSeguimiento.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 16)); // NOI18N
+        jButtonSeguimiento.setText("Control familias y cuidados");
+        jButtonSeguimiento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSeguimientoActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(jButtonSeguimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 210, 50));
+
+        jButtonInfo.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 16)); // NOI18N
+        jButtonInfo.setText("Información familia.");
+        jButtonInfo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInfoActionPerformed(evt);
+            }
+        });
+        jPanelMenu.add(jButtonInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 210, 50));
+
         jButtonVolverAtras.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 16)); // NOI18N
         jButtonVolverAtras.setText("Volver atrás.");
         jButtonVolverAtras.addActionListener(new java.awt.event.ActionListener() {
@@ -133,7 +169,7 @@ public class Familias extends javax.swing.JFrame {
                 jButtonVolverAtrasActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButtonVolverAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 210, 50));
+        jPanelMenu.add(jButtonVolverAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 210, 50));
 
         jButtonSalir.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 16)); // NOI18N
         jButtonSalir.setText("Salir.");
@@ -142,7 +178,7 @@ public class Familias extends javax.swing.JFrame {
                 jButtonSalirActionPerformed(evt);
             }
         });
-        jPanelMenu.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 210, 50));
+        jPanelMenu.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 210, 50));
 
         getContentPane().add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 230, 500));
 
@@ -295,6 +331,86 @@ public class Familias extends javax.swing.JFrame {
 
         getContentPane().add(jPanelVerFamilias, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 650, 500));
 
+        jPanelSeguimiento.setBackground(new java.awt.Color(0, 51, 102));
+        jPanelSeguimiento.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanelSeguimiento.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabelTitulo3.setFont(new java.awt.Font("Yu Gothic UI", 0, 24)); // NOI18N
+        jLabelTitulo3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelTitulo3.setText("Seguimiento y control ");
+        jPanelSeguimiento.add(jLabelTitulo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, -10, 410, 110));
+
+        jLabelNombreF.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelNombreF.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNombreF.setText("Familia:");
+        jPanelSeguimiento.add(jLabelNombreF, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+
+        textFamilia.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        textFamilia.setForeground(new java.awt.Color(0, 102, 153));
+        jPanelSeguimiento.add(textFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 200, 30));
+
+        jLabelNombreN.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelNombreN.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNombreN.setText("Nombre nuevo del gato:");
+        jPanelSeguimiento.add(jLabelNombreN, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
+
+        textNuevo.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        textNuevo.setForeground(new java.awt.Color(0, 102, 153));
+        jPanelSeguimiento.add(textNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 200, 30));
+
+        jLabelControl.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelControl.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelControl.setText("Control veterinario:");
+        jPanelSeguimiento.add(jLabelControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, -1, -1));
+
+        jScrollPane2.setForeground(new java.awt.Color(0, 102, 204));
+        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        textControl.setColumns(20);
+        textControl.setForeground(new java.awt.Color(0, 102, 153));
+        textControl.setRows(5);
+        jScrollPane2.setViewportView(textControl);
+
+        jPanelSeguimiento.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 250, 280, 220));
+
+        jLabelAdaptacion.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelAdaptacion.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelAdaptacion.setText("Adaptacion al hogar:");
+        jPanelSeguimiento.add(jLabelAdaptacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, -1, -1));
+
+        jScrollPane3.setForeground(new java.awt.Color(0, 102, 204));
+        jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        textAdaptacion.setColumns(20);
+        textAdaptacion.setForeground(new java.awt.Color(0, 102, 153));
+        textAdaptacion.setRows(5);
+        jScrollPane3.setViewportView(textAdaptacion);
+
+        jPanelSeguimiento.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 240, 200));
+
+        jButtonSubirControl.setBackground(new java.awt.Color(102, 102, 255));
+        jButtonSubirControl.setFont(new java.awt.Font("Yu Gothic UI", 0, 16)); // NOI18N
+        jButtonSubirControl.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSubirControl.setText("Subir nuevo control");
+        jButtonSubirControl.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonSubirControl.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSubirControlActionPerformed(evt);
+            }
+        });
+        jPanelSeguimiento.add(jButtonSubirControl, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 400, 200, 40));
+
+        jLabelID.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelID.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelID.setText("ID Familia:");
+        jPanelSeguimiento.add(jLabelID, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, -1, -1));
+
+        textIDFamilia.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        textIDFamilia.setForeground(new java.awt.Color(0, 102, 153));
+        jPanelSeguimiento.add(textIDFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 120, 60, 30));
+
+        getContentPane().add(jPanelSeguimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 650, 500));
+
         jLabelWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/refugio/luces-azules.jpg"))); // NOI18N
         getContentPane().add(jLabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, -20, 930, 900));
 
@@ -307,6 +423,7 @@ public class Familias extends javax.swing.JFrame {
         jPanelNormal.setVisible(false);
         jPanelRegistro.setVisible(true);
         jPanelVerFamilias.setVisible(false);
+        jPanelSeguimiento.setVisible(false);
 
     }//GEN-LAST:event_jButtonRegistrarGatoFamiliaActionPerformed
 
@@ -316,6 +433,7 @@ public class Familias extends javax.swing.JFrame {
         jPanelNormal.setVisible(false);
         jPanelRegistro.setVisible(false);
         jPanelVerFamilias.setVisible(true);
+        jPanelSeguimiento.setVisible(false);
 
         // creación de tabla para mostrar familias
         DefaultTableModel modelo = new DefaultTableModel();
@@ -460,6 +578,87 @@ public class Familias extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonVerNombreActionPerformed
 
+    private void jButtonInfoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInfoActionPerformed
+       
+       InformacionFamilia infoFamilia = new InformacionFamilia();
+       infoFamilia.setVisible(true);
+       this.dispose();
+        
+    }//GEN-LAST:event_jButtonInfoActionPerformed
+
+    private void jButtonSeguimientoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSeguimientoActionPerformed
+
+        // cambio panel visible
+        jPanelNormal.setVisible(false);
+        jPanelRegistro.setVisible(false);
+        jPanelVerFamilias.setVisible(false);
+        jPanelSeguimiento.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonSeguimientoActionPerformed
+
+    private void jButtonSubirControlActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSubirControlActionPerformed
+      
+        String familia, nombre, IDFam, control, adaptacion;
+        int validar = 0;
+        
+        familia = textFamilia.getText().trim();
+        nombre = textNuevo.getText().trim();
+        IDFam = textIDFamilia.getText().trim();
+        control = textControl.getText().trim();
+        adaptacion = textAdaptacion.getText().trim();
+        
+        // verificación de que no haya campos vacios
+        if(familia.equals("")){
+            textFamilia.setBackground(Color.red);
+            validar++;
+        }
+        if(nombre.equals("")){
+            textNuevo.setBackground(Color.red);
+            validar++;
+        }
+        if(IDFam.equals("")){
+            textIDFamilia.setBackground(Color.red);
+            validar++;
+        }
+        if(control.equals("")){
+            textControl.setBackground(Color.red);
+            validar++;
+        }
+        if(adaptacion.equals("")){
+            textAdaptacion.setBackground(Color.red);
+            validar++;
+        }
+        
+        if(validar == 0){
+            
+            try{
+                Connection cn = Conexion.conectar();
+                PreparedStatement pst = cn.prepareStatement("insert into seguimiento "
+                        + "values (?, ?, ?, ?, ?)");
+                
+                pst.setString(1, familia);
+                pst.setString(2, nombre);
+                pst.setString(3, IDFam);
+                pst.setString(4, control);
+                pst.setString(5, adaptacion);
+                
+                pst.executeQuery();
+                cn.close();
+                JOptionPane.showMessageDialog(null, "Registro exitoso");
+                
+            }catch(SQLException e){
+                JOptionPane.showMessageDialog(null, "No se pudo registrar el "
+                        + "seguimiento del estado del gato adoptado");
+                System.err.println("Error al registrar el seguimiento " + e);
+            }
+            
+        }else{
+            JOptionPane.showMessageDialog(null, "Es necesario que completes todos "
+                    + "los campos solicitados");
+        }
+        
+    }//GEN-LAST:event_jButtonSubirControlActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -496,38 +695,55 @@ public class Familias extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonInfo;
     private javax.swing.JButton jButtonRegistrarFamilia;
     private javax.swing.JButton jButtonRegistrarGatoFamilia;
     private javax.swing.JButton jButtonSalir;
+    private javax.swing.JButton jButtonSeguimiento;
+    private javax.swing.JButton jButtonSubirControl;
     private javax.swing.JButton jButtonVerFamiliasRegistradas;
     private javax.swing.JButton jButtonVerNombre;
     private javax.swing.JButton jButtonVolverAtras;
     private com.toedter.calendar.JDateChooser jDateIngresoHogar;
+    private javax.swing.JLabel jLabelAdaptacion;
+    private javax.swing.JLabel jLabelControl;
     private javax.swing.JLabel jLabelDireccion;
     private javax.swing.JLabel jLabelFechaIngreso;
     private javax.swing.JLabel jLabelGato1;
     private javax.swing.JLabel jLabelGatoColgando;
+    private javax.swing.JLabel jLabelID;
     private javax.swing.JLabel jLabelIDIngreso;
     private javax.swing.JLabel jLabelImagen;
     private javax.swing.JLabel jLabelNombre;
     private javax.swing.JLabel jLabelNombreAnterior;
+    private javax.swing.JLabel jLabelNombreF;
     private javax.swing.JLabel jLabelNombreGato;
+    private javax.swing.JLabel jLabelNombreN;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel jLabelTitulo1;
     private javax.swing.JLabel jLabelTitulo2;
+    private javax.swing.JLabel jLabelTitulo3;
     private javax.swing.JLabel jLabelTituloCentral;
     private javax.swing.JLabel jLabelWallpaper;
     private javax.swing.JPanel jPanelMenu;
     private javax.swing.JPanel jPanelNormal;
     private javax.swing.JPanel jPanelRegistro;
+    private javax.swing.JPanel jPanelSeguimiento;
     private javax.swing.JPanel jPanelVerFamilias;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTableFamilias;
+    private javax.swing.JTextArea textAdaptacion;
+    private javax.swing.JTextArea textControl;
     private javax.swing.JTextField textDireccion;
+    private javax.swing.JTextField textFamilia;
+    private javax.swing.JTextField textIDFamilia;
     private javax.swing.JTextField textIDRegistro;
     private javax.swing.JTextField textNombreFamilia;
     private javax.swing.JTextField textNombreIngreso;
     private javax.swing.JTextField textNombreNuevoGato;
+    private javax.swing.JTextField textNuevo;
     // End of variables declaration//GEN-END:variables
 
     public void LimpiarCampos(){
