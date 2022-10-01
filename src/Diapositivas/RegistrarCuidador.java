@@ -30,7 +30,7 @@ public class RegistrarCuidador extends javax.swing.JFrame {
      */
     public RegistrarCuidador() {
         initComponents();
-        setSize(800, 640);
+        setSize(800, 680);
         
         usuario = Login.usuario;
         sesionUsuario = 1;
@@ -75,10 +75,18 @@ public class RegistrarCuidador extends javax.swing.JFrame {
         jLabelStatusCuidador = new javax.swing.JLabel();
         cmbStatus = new javax.swing.JComboBox<>();
         jButtonVolverAtras = new javax.swing.JButton();
-        jButtonRegistrarCuidador = new javax.swing.JButton();
+        jButtonSalir = new javax.swing.JButton();
         jButtonVerGatos = new javax.swing.JButton();
         jButtonVerCuidadores = new javax.swing.JButton();
-        jButtonSalir = new javax.swing.JButton();
+        jButtonRegistrarCuidador = new javax.swing.JButton();
+        jLabelDireccion = new javax.swing.JLabel();
+        textDireccion = new javax.swing.JTextField();
+        jLabelCantidad = new javax.swing.JLabel();
+        textCantidad = new javax.swing.JTextField();
+        jLabelCapacidad = new javax.swing.JLabel();
+        textCapacidad = new javax.swing.JTextField();
+        jLabelIDPersonal = new javax.swing.JLabel();
+        textIDP = new javax.swing.JTextField();
         jLabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -145,17 +153,17 @@ public class RegistrarCuidador extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonVolverAtras, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 180, 200, -1));
 
-        jButtonRegistrarCuidador.setBackground(new java.awt.Color(102, 102, 255));
-        jButtonRegistrarCuidador.setFont(new java.awt.Font("Yu Gothic UI", 0, 16)); // NOI18N
-        jButtonRegistrarCuidador.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonRegistrarCuidador.setText("Registrar cuidador");
-        jButtonRegistrarCuidador.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonRegistrarCuidador.addActionListener(new java.awt.event.ActionListener() {
+        jButtonSalir.setBackground(new java.awt.Color(102, 102, 255));
+        jButtonSalir.setFont(new java.awt.Font("Yu Gothic UI", 0, 16)); // NOI18N
+        jButtonSalir.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonSalir.setText("Salir del sistema");
+        jButtonSalir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegistrarCuidadorActionPerformed(evt);
+                jButtonSalirActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegistrarCuidador, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 200, 100));
+        getContentPane().add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 200, -1));
 
         jButtonVerGatos.setBackground(new java.awt.Color(102, 102, 255));
         jButtonVerGatos.setFont(new java.awt.Font("Yu Gothic UI", 0, 16)); // NOI18N
@@ -181,17 +189,53 @@ public class RegistrarCuidador extends javax.swing.JFrame {
         });
         getContentPane().add(jButtonVerCuidadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 340, 200, -1));
 
-        jButtonSalir.setBackground(new java.awt.Color(102, 102, 255));
-        jButtonSalir.setFont(new java.awt.Font("Yu Gothic UI", 0, 16)); // NOI18N
-        jButtonSalir.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonSalir.setText("Salir del sistema");
-        jButtonSalir.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButtonSalir.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRegistrarCuidador.setBackground(new java.awt.Color(102, 102, 255));
+        jButtonRegistrarCuidador.setFont(new java.awt.Font("Yu Gothic UI", 0, 16)); // NOI18N
+        jButtonRegistrarCuidador.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRegistrarCuidador.setText("Registrar cuidador");
+        jButtonRegistrarCuidador.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButtonRegistrarCuidador.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonSalirActionPerformed(evt);
+                jButtonRegistrarCuidadorActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 220, 200, -1));
+        getContentPane().add(jButtonRegistrarCuidador, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 450, 200, 100));
+
+        jLabelDireccion.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelDireccion.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelDireccion.setText("Dirección:");
+        getContentPane().add(jLabelDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, -1));
+
+        textDireccion.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        textDireccion.setForeground(new java.awt.Color(0, 102, 153));
+        getContentPane().add(textDireccion, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 150, 30));
+
+        jLabelCantidad.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelCantidad.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCantidad.setText("Cantidad de gatos a cargo:");
+        getContentPane().add(jLabelCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, -1));
+
+        textCantidad.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        textCantidad.setForeground(new java.awt.Color(0, 102, 153));
+        getContentPane().add(textCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 520, 150, 30));
+
+        jLabelCapacidad.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelCapacidad.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelCapacidad.setText("Capacidad hogar:");
+        getContentPane().add(jLabelCapacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, -1, -1));
+
+        textCapacidad.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        textCapacidad.setForeground(new java.awt.Color(0, 102, 153));
+        getContentPane().add(textCapacidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 580, 150, 30));
+
+        jLabelIDPersonal.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        jLabelIDPersonal.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelIDPersonal.setText("ID personal:");
+        getContentPane().add(jLabelIDPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, -1, -1));
+
+        textIDP.setFont(new java.awt.Font("Yu Gothic UI", 0, 14)); // NOI18N
+        textIDP.setForeground(new java.awt.Color(0, 102, 153));
+        getContentPane().add(textIDP, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 150, 30));
 
         jLabelWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/refugio/espirales-de-colores.jpg"))); // NOI18N
         getContentPane().add(jLabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, -70, 2000, 850));
@@ -211,7 +255,8 @@ public class RegistrarCuidador extends javax.swing.JFrame {
 
         // declaración variables
         int status, avanzar = 0;
-        String nombre, apellido, usuario, contraseña, statusNivel = null;
+        String nombre, apellido, usuario, contraseña, statusNivel = null, 
+                direccion, cantidad, capacidad, ID;
         
         // obtener valores
         nombre = textNombreEmpleado.getText().trim();
@@ -219,6 +264,11 @@ public class RegistrarCuidador extends javax.swing.JFrame {
         usuario = textUsuario.getText().trim();
         contraseña = textContraseña.getText().trim();
         status = cmbStatus.getSelectedIndex() + 1;
+        
+        direccion = textDireccion.getText().trim();
+        cantidad = textCantidad.getText().trim();
+        capacidad = textCapacidad.getText().trim();
+        ID = textIDP.getText().trim();
         
          // verificación de que no haya campos sin completador.
         if(nombre.equals("")){
@@ -234,7 +284,26 @@ public class RegistrarCuidador extends javax.swing.JFrame {
             textContraseña.setBackground(Color.red);
             avanzar++;
         }
+    
+        // verificación de la base de datos de datoscuidador
+        if(direccion.equals("")){
+            textDireccion.setBackground(Color.red);
+            avanzar++;
+        }
+        if(cantidad.equals("")){
+            textCantidad.setBackground(Color.red);
+            avanzar++;
+        }
+        if(capacidad.equals("")){
+            textCapacidad.setBackground(Color.red);
+            avanzar++;
+        }
+        if(ID.equals("")){
+            textIDP.setBackground(Color.red);
+            avanzar++;
+        }
         
+
         // dar valor al cmb de status
         if(status == 1){
             statusNivel = "Activo";
@@ -247,8 +316,10 @@ public class RegistrarCuidador extends javax.swing.JFrame {
         
             try{
                 Connection cn = Conexion.conectar();
-                PreparedStatement pst = cn.prepareStatement("insert into personalRefugio values (?, ?, ?, ?, ?, ?)");
+                PreparedStatement pst = cn.prepareStatement("insert into personalrefugio values (?, ?, ?, ?, ?, ?)");
+                PreparedStatement pst2 = cn.prepareStatement("insert into datoscuidador values (?, ?, ?, ?, ?, ?)");
                
+                    // base personalrefugio
                     pst.setInt(1, 0);
                     pst.setString(2, nombre);
                     pst.setString(3, apellido);
@@ -256,7 +327,16 @@ public class RegistrarCuidador extends javax.swing.JFrame {
                     pst.setString(5, contraseña);
                     pst.setString(6, statusNivel);
                     
-                    pst.executeUpdate();
+                    // base datoscuidador
+                    pst2.setInt(1, 0);
+                    pst2.setString(2, nombre);
+                    pst2.setString(3, direccion);
+                    pst2.setString(4, cantidad);
+                    pst2.setString(5, capacidad);
+                    pst2.setString(6, ID);
+                    
+                    pst.executeQuery();
+                    pst2.executeQuery();
                     cn.close();
            
                     // vacío de campos
@@ -343,23 +423,38 @@ public class RegistrarCuidador extends javax.swing.JFrame {
     private javax.swing.JButton jButtonVerGatos;
     private javax.swing.JButton jButtonVolverAtras;
     private javax.swing.JLabel jLabelApellido;
+    private javax.swing.JLabel jLabelCantidad;
+    private javax.swing.JLabel jLabelCapacidad;
     private javax.swing.JLabel jLabelContraseña;
+    private javax.swing.JLabel jLabelDireccion;
+    private javax.swing.JLabel jLabelIDPersonal;
     private javax.swing.JLabel jLabelNombre;
     private javax.swing.JLabel jLabelStatusCuidador;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel jLabelUsuario;
     private javax.swing.JLabel jLabelWallpaper;
     private javax.swing.JTextField textApellido;
+    private javax.swing.JTextField textCantidad;
+    private javax.swing.JTextField textCapacidad;
     private javax.swing.JPasswordField textContraseña;
+    private javax.swing.JTextField textDireccion;
+    private javax.swing.JTextField textIDP;
     private javax.swing.JTextField textNombreEmpleado;
     private javax.swing.JTextField textUsuario;
     // End of variables declaration//GEN-END:variables
 
 public void VaciarCampos(){
+    // personalrefugio
     textNombreEmpleado.setText("");
     textApellido.setText("");
     textUsuario.setText("");
     textContraseña.setText("");
     cmbStatus.setSelectedIndex(0);
+    
+    // datoscuidador
+    textDireccion.setText("");
+    textCantidad.setText("");
+    textCapacidad.setText("");
+    textIDP.setText("");
 }
 }

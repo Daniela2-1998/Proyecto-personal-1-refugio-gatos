@@ -29,7 +29,7 @@ public class Inicio extends javax.swing.JFrame {
      */
     public Inicio() {
         initComponents();
-        setSize(600, 570);
+        setSize(640, 670);
         
         usuario = Login.usuario;
         sesionUsuario = 1;
@@ -46,6 +46,13 @@ public class Inicio extends javax.swing.JFrame {
         jLabelWallpaper.getWidth(), Image.SCALE_DEFAULT));
         jLabelWallpaper.setIcon(icono);
         this.repaint();
+        
+        // panel visible activo
+        jPanelMenu.setVisible(true);
+        jPanelGatos.setVisible(false);
+        jPanelCuidadores.setVisible(false);
+        jPanelFamilias.setVisible(false);
+        jPanelGastos.setVisible(false);
         
         // nombre en el título
         try{
@@ -83,13 +90,33 @@ public class Inicio extends javax.swing.JFrame {
         jLabelTitulo = new javax.swing.JLabel();
         jLabelGatoMirandoIzq = new javax.swing.JLabel();
         jLabelGatoColgando = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
+        jPanelMenu = new javax.swing.JPanel();
+        jButtonGatos = new javax.swing.JButton();
+        jButtonCuidadores = new javax.swing.JButton();
+        jButtonFamilia = new javax.swing.JButton();
+        jButtonGYC = new javax.swing.JButton();
+        jButtonSalir = new javax.swing.JButton();
+        jPanelGatos = new javax.swing.JPanel();
         jButtonRegistrarGatos = new javax.swing.JButton();
         jButtonVerGatos = new javax.swing.JButton();
+        jButtonInfoGatos = new javax.swing.JButton();
+        jButtonMenu = new javax.swing.JButton();
+        jButtonSalir1 = new javax.swing.JButton();
+        jPanelCuidadores = new javax.swing.JPanel();
         jButtonRegistrarCuidador = new javax.swing.JButton();
         jButtonVerCuidador = new javax.swing.JButton();
+        jButtonInfoCuidadores = new javax.swing.JButton();
+        jButtonSalir2 = new javax.swing.JButton();
+        jButtonMenu1 = new javax.swing.JButton();
+        jButtonContraseña = new javax.swing.JButton();
+        jPanelFamilias = new javax.swing.JPanel();
         jButtonFamilias = new javax.swing.JButton();
-        jButtonSalir = new javax.swing.JButton();
+        jButtonMenu2 = new javax.swing.JButton();
+        jButtonSalir3 = new javax.swing.JButton();
+        jPanelGastos = new javax.swing.JPanel();
+        jButtonVeterinario = new javax.swing.JButton();
+        jButtonMenu3 = new javax.swing.JButton();
+        jButtonSalir4 = new javax.swing.JButton();
         jLabelWallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -108,55 +135,46 @@ public class Inicio extends javax.swing.JFrame {
         jLabelGatoColgando.setIcon(new javax.swing.ImageIcon(getClass().getResource("/refugio/gatocolgando1.png"))); // NOI18N
         getContentPane().add(jLabelGatoColgando, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 290, 140));
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 153));
-        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
-        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanelMenu.setBackground(new java.awt.Color(0, 102, 153));
+        jPanelMenu.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPanelMenu.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButtonRegistrarGatos.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jButtonRegistrarGatos.setText("Registrar gatos.");
-        jButtonRegistrarGatos.addActionListener(new java.awt.event.ActionListener() {
+        jButtonGatos.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonGatos.setText("Gatos.");
+        jButtonGatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegistrarGatosActionPerformed(evt);
+                jButtonGatosActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonRegistrarGatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 260, 40));
+        jPanelMenu.add(jButtonGatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 260, 40));
 
-        jButtonVerGatos.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jButtonVerGatos.setText("Ver gatos registrados.");
-        jButtonVerGatos.addActionListener(new java.awt.event.ActionListener() {
+        jButtonCuidadores.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonCuidadores.setText("Cuidadores.");
+        jButtonCuidadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVerGatosActionPerformed(evt);
+                jButtonCuidadoresActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonVerGatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, 260, 40));
+        jPanelMenu.add(jButtonCuidadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 260, 40));
 
-        jButtonRegistrarCuidador.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jButtonRegistrarCuidador.setText("Registrar cuidador.");
-        jButtonRegistrarCuidador.addActionListener(new java.awt.event.ActionListener() {
+        jButtonFamilia.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonFamilia.setText("Familias.");
+        jButtonFamilia.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegistrarCuidadorActionPerformed(evt);
+                jButtonFamiliaActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonRegistrarCuidador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 260, 40));
+        jPanelMenu.add(jButtonFamilia, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 260, 40));
 
-        jButtonVerCuidador.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jButtonVerCuidador.setText("Ver cuidadores.");
-        jButtonVerCuidador.addActionListener(new java.awt.event.ActionListener() {
+        jButtonGYC.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonGYC.setText("Gastos y controles.");
+        jButtonGYC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonVerCuidadorActionPerformed(evt);
+                jButtonGYCActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonVerCuidador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, 260, 40));
-
-        jButtonFamilias.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
-        jButtonFamilias.setText("Familias.");
-        jButtonFamilias.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonFamiliasActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButtonFamilias, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 330, 260, 40));
+        jPanelMenu.add(jButtonGYC, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 260, 40));
 
         jButtonSalir.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
         jButtonSalir.setText("Salir.");
@@ -165,13 +183,194 @@ public class Inicio extends javax.swing.JFrame {
                 jButtonSalirActionPerformed(evt);
             }
         });
-        jPanel1.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 260, 40));
+        jPanelMenu.add(jButtonSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, 260, 40));
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, 520));
+        getContentPane().add(jPanelMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, 540));
+
+        jPanelGatos.setBackground(new java.awt.Color(0, 102, 153));
+        jPanelGatos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPanelGatos.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelGatos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonRegistrarGatos.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonRegistrarGatos.setText("Registrar gatos.");
+        jButtonRegistrarGatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarGatosActionPerformed(evt);
+            }
+        });
+        jPanelGatos.add(jButtonRegistrarGatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 260, 40));
+
+        jButtonVerGatos.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonVerGatos.setText("Ver gatos registrados.");
+        jButtonVerGatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVerGatosActionPerformed(evt);
+            }
+        });
+        jPanelGatos.add(jButtonVerGatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 260, 40));
+
+        jButtonInfoGatos.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonInfoGatos.setText("Información gatos.");
+        jButtonInfoGatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInfoGatosActionPerformed(evt);
+            }
+        });
+        jPanelGatos.add(jButtonInfoGatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, 260, 40));
+
+        jButtonMenu.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonMenu.setText("Volver al menú.");
+        jButtonMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenuActionPerformed(evt);
+            }
+        });
+        jPanelGatos.add(jButtonMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 260, 40));
+
+        jButtonSalir1.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonSalir1.setText("Salir.");
+        jButtonSalir1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalir1ActionPerformed(evt);
+            }
+        });
+        jPanelGatos.add(jButtonSalir1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 260, 40));
+
+        getContentPane().add(jPanelGatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, 540));
+
+        jPanelCuidadores.setBackground(new java.awt.Color(0, 102, 153));
+        jPanelCuidadores.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPanelCuidadores.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelCuidadores.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonRegistrarCuidador.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonRegistrarCuidador.setText("Registrar cuidador.");
+        jButtonRegistrarCuidador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegistrarCuidadorActionPerformed(evt);
+            }
+        });
+        jPanelCuidadores.add(jButtonRegistrarCuidador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 260, 40));
+
+        jButtonVerCuidador.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonVerCuidador.setText("Ver cuidadores.");
+        jButtonVerCuidador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVerCuidadorActionPerformed(evt);
+            }
+        });
+        jPanelCuidadores.add(jButtonVerCuidador, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 260, 40));
+
+        jButtonInfoCuidadores.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonInfoCuidadores.setText("Información cuidadores.");
+        jButtonInfoCuidadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInfoCuidadoresActionPerformed(evt);
+            }
+        });
+        jPanelCuidadores.add(jButtonInfoCuidadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 260, 40));
+
+        jButtonSalir2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonSalir2.setText("Salir.");
+        jButtonSalir2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalir2ActionPerformed(evt);
+            }
+        });
+        jPanelCuidadores.add(jButtonSalir2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 260, 40));
+
+        jButtonMenu1.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonMenu1.setText("Volver al menú.");
+        jButtonMenu1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenu1ActionPerformed(evt);
+            }
+        });
+        jPanelCuidadores.add(jButtonMenu1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 260, 40));
+
+        jButtonContraseña.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonContraseña.setText("Cambio de contraseña.");
+        jButtonContraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonContraseñaActionPerformed(evt);
+            }
+        });
+        jPanelCuidadores.add(jButtonContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 260, 40));
+
+        getContentPane().add(jPanelCuidadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, 540));
+
+        jPanelFamilias.setBackground(new java.awt.Color(0, 102, 153));
+        jPanelFamilias.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPanelFamilias.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelFamilias.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonFamilias.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonFamilias.setText("Familias.");
+        jButtonFamilias.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonFamiliasActionPerformed(evt);
+            }
+        });
+        jPanelFamilias.add(jButtonFamilias, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 260, 40));
+
+        jButtonMenu2.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonMenu2.setText("Volver al menú.");
+        jButtonMenu2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenu2ActionPerformed(evt);
+            }
+        });
+        jPanelFamilias.add(jButtonMenu2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 260, 40));
+
+        jButtonSalir3.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonSalir3.setText("Salir.");
+        jButtonSalir3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalir3ActionPerformed(evt);
+            }
+        });
+        jPanelFamilias.add(jButtonSalir3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 260, 40));
+
+        getContentPane().add(jPanelFamilias, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, 540));
+
+        jPanelGastos.setBackground(new java.awt.Color(0, 102, 153));
+        jPanelGastos.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray, java.awt.Color.lightGray));
+        jPanelGastos.setForeground(new java.awt.Color(255, 255, 255));
+        jPanelGastos.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButtonVeterinario.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonVeterinario.setText("Veterinario.");
+        jButtonVeterinario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVeterinarioActionPerformed(evt);
+            }
+        });
+        jPanelGastos.add(jButtonVeterinario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, 260, 40));
+
+        jButtonMenu3.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonMenu3.setText("Volver al menú.");
+        jButtonMenu3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonMenu3ActionPerformed(evt);
+            }
+        });
+        jPanelGastos.add(jButtonMenu3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 260, 40));
+
+        jButtonSalir4.setFont(new java.awt.Font("Yu Gothic UI Light", 0, 18)); // NOI18N
+        jButtonSalir4.setText("Salir.");
+        jButtonSalir4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalir4ActionPerformed(evt);
+            }
+        });
+        jPanelGastos.add(jButtonSalir4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 350, 260, 40));
+
+        getContentPane().add(jPanelGastos, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 300, 540));
 
         jLabelWallpaper.setForeground(new java.awt.Color(0, 51, 102));
         jLabelWallpaper.setIcon(new javax.swing.ImageIcon(getClass().getResource("/refugio/curvas.jpg"))); // NOI18N
-        getContentPane().add(jLabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 620, 650));
+        getContentPane().add(jLabelWallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(-70, -40, 760, 710));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -222,6 +421,150 @@ public class Inicio extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonFamiliasActionPerformed
 
+    private void jButtonInfoGatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInfoGatosActionPerformed
+       
+        InformacionGato infoGato = new InformacionGato();
+        infoGato.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_jButtonInfoGatosActionPerformed
+
+    private void jButtonInfoCuidadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInfoCuidadoresActionPerformed
+        
+        InformacionCuidador infoCuidador = new InformacionCuidador();
+        infoCuidador.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_jButtonInfoCuidadoresActionPerformed
+
+    private void jButtonGatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGatosActionPerformed
+        
+        // panel visible activo
+        jPanelMenu.setVisible(false);
+        jPanelGatos.setVisible(true);
+        jPanelCuidadores.setVisible(false);
+        jPanelFamilias.setVisible(false);
+        jPanelGastos.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonGatosActionPerformed
+
+    private void jButtonCuidadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCuidadoresActionPerformed
+      
+        // panel visible activo
+        jPanelMenu.setVisible(false);
+        jPanelGatos.setVisible(false);
+        jPanelCuidadores.setVisible(true);
+        jPanelFamilias.setVisible(false);
+        jPanelGastos.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonCuidadoresActionPerformed
+
+    private void jButtonFamiliaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFamiliaActionPerformed
+        
+        // panel visible activo
+        jPanelMenu.setVisible(false);
+        jPanelGatos.setVisible(false);
+        jPanelCuidadores.setVisible(false);
+        jPanelFamilias.setVisible(true);
+        jPanelGastos.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonFamiliaActionPerformed
+
+    private void jButtonSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir1ActionPerformed
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_jButtonSalir1ActionPerformed
+
+    private void jButtonMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenuActionPerformed
+     
+        // panel visible activo
+        jPanelMenu.setVisible(true);
+        jPanelGatos.setVisible(false);
+        jPanelCuidadores.setVisible(false);
+        jPanelFamilias.setVisible(false);
+        jPanelGastos.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonMenuActionPerformed
+
+    private void jButtonSalir2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir2ActionPerformed
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_jButtonSalir2ActionPerformed
+
+    private void jButtonMenu1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenu1ActionPerformed
+     
+        // panel visible activo
+        jPanelMenu.setVisible(true);
+        jPanelGatos.setVisible(false);
+        jPanelCuidadores.setVisible(false);
+        jPanelFamilias.setVisible(false);
+        jPanelGastos.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonMenu1ActionPerformed
+
+    private void jButtonMenu2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenu2ActionPerformed
+        
+        // panel visible activo
+        jPanelMenu.setVisible(true);
+        jPanelGatos.setVisible(false);
+        jPanelCuidadores.setVisible(false);
+        jPanelFamilias.setVisible(false);
+        jPanelGastos.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonMenu2ActionPerformed
+
+    private void jButtonSalir3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir3ActionPerformed
+        
+        System.exit(0);
+        
+    }//GEN-LAST:event_jButtonSalir3ActionPerformed
+
+    private void jButtonVeterinarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVeterinarioActionPerformed
+     
+        Veterinario veterinario = new Veterinario();
+        veterinario.setVisible(true);
+        this.dispose();
+        
+    }//GEN-LAST:event_jButtonVeterinarioActionPerformed
+
+    private void jButtonMenu3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenu3ActionPerformed
+      
+        // panel visible activo
+        jPanelMenu.setVisible(true);
+        jPanelGatos.setVisible(false);
+        jPanelCuidadores.setVisible(false);
+        jPanelFamilias.setVisible(false);
+        jPanelGastos.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonMenu3ActionPerformed
+
+    private void jButtonSalir4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalir4ActionPerformed
+        
+       System.exit(0);
+        
+    }//GEN-LAST:event_jButtonSalir4ActionPerformed
+
+    private void jButtonGYCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGYCActionPerformed
+
+        // panel visible activo
+        jPanelMenu.setVisible(false);
+        jPanelGatos.setVisible(false);
+        jPanelCuidadores.setVisible(false);
+        jPanelFamilias.setVisible(false);
+        jPanelGastos.setVisible(true);
+        
+    }//GEN-LAST:event_jButtonGYCActionPerformed
+
+    private void jButtonContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonContraseñaActionPerformed
+       
+        Contraseña contraseña = new Contraseña();
+        contraseña.setVisible(true);
+        this.dispose();
+
+    }//GEN-LAST:event_jButtonContraseñaActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -258,16 +601,36 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonContraseña;
+    private javax.swing.JButton jButtonCuidadores;
+    private javax.swing.JButton jButtonFamilia;
     private javax.swing.JButton jButtonFamilias;
+    private javax.swing.JButton jButtonGYC;
+    private javax.swing.JButton jButtonGatos;
+    private javax.swing.JButton jButtonInfoCuidadores;
+    private javax.swing.JButton jButtonInfoGatos;
+    private javax.swing.JButton jButtonMenu;
+    private javax.swing.JButton jButtonMenu1;
+    private javax.swing.JButton jButtonMenu2;
+    private javax.swing.JButton jButtonMenu3;
     private javax.swing.JButton jButtonRegistrarCuidador;
     private javax.swing.JButton jButtonRegistrarGatos;
     private javax.swing.JButton jButtonSalir;
+    private javax.swing.JButton jButtonSalir1;
+    private javax.swing.JButton jButtonSalir2;
+    private javax.swing.JButton jButtonSalir3;
+    private javax.swing.JButton jButtonSalir4;
     private javax.swing.JButton jButtonVerCuidador;
     private javax.swing.JButton jButtonVerGatos;
+    private javax.swing.JButton jButtonVeterinario;
     private javax.swing.JLabel jLabelGatoColgando;
     private javax.swing.JLabel jLabelGatoMirandoIzq;
     private javax.swing.JLabel jLabelTitulo;
     private javax.swing.JLabel jLabelWallpaper;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanelCuidadores;
+    private javax.swing.JPanel jPanelFamilias;
+    private javax.swing.JPanel jPanelGastos;
+    private javax.swing.JPanel jPanelGatos;
+    private javax.swing.JPanel jPanelMenu;
     // End of variables declaration//GEN-END:variables
 }
